@@ -1,3 +1,6 @@
+
+
+
 ----
 # virsh list
  10    rhel7.8                        running
@@ -8,4 +11,4 @@
  37    ocp4-master-3                  running
  38    ocp4-worker-1                  running
  39    ocp4-worker-2                  running
- ----
+----
