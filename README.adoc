@@ -1,0 +1,13 @@
+----
+# virsh list
+ Id    Name                           State
+----------------------------------------------------
+ 10    rhel7.8                        running
+ 11    vm1                            running
+ 27    ocp4-lb                        running
+ 35    ocp4-master-1                  running
+ 36    ocp4-master-2                  running
+ 37    ocp4-master-3                  running
+ 38    ocp4-worker-1                  running
+ 39    ocp4-worker-2                  running
+ ----
