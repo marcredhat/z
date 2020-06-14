@@ -8,6 +8,11 @@ on one baremetal server (RHEL 7 / KVM / libvirt)
 ----
 
 ----
+We'll also show how to build, deploy and run applications on the emulated mainframe using Visual Studio Code, the Zowe extension and the Zowe CLI.
+(You can of course also connect to the emulated mainframe using x3270)
+----
+
+----
 # virsh list
  10    rhel7.8                        running
  11    vm1                            running
