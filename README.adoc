@@ -38,19 +38,19 @@ Kubernetes Version: v1.17.1
 ----
 
 ----
-cat ./domifaddr.sh
+# cat ./domifaddr.sh
 for x in vm1 rhel7.8  ocp4-lb ocp4-master-1  ocp4-master-2  ocp4-master-3  ocp4-worker-1 ocp4-worker-2
 do
-  echo `virsh domifaddr "$x"`
+  echo $x: `virsh domifaddr "$x"` | sed -e 's/Name MAC address Protocol Address -------------------------------------------------------------------------------//g'
 done
 
 # ./domifaddr.sh
-Name MAC address Protocol Address  vnet0 52:54:00:0f:46:43 ipv4 192.168.122.212/24
-Name MAC address Protocol Address  vnet1 52:54:00:a1:84:a6 ipv4 192.168.122.174/24
-Name MAC address Protocol Address  vnet2 52:54:00:e5:d2:07 ipv4 192.168.122.206/24
-Name MAC address Protocol Address  vnet4 52:54:00:83:7b:7a ipv4 192.168.122.216/24
-Name MAC address Protocol Address  vnet5 52:54:00:de:f6:02 ipv4 192.168.122.215/24
-Name MAC address Protocol Address  vnet6 52:54:00:c2:8e:00 ipv4 192.168.122.123/24
-Name MAC address Protocol Address  vnet7 52:54:00:32:e5:d7 ipv4 192.168.122.157/24
-Name MAC address Protocol Address  vnet8 52:54:00:0b:a9:5c ipv4 192.168.122.109/24
+vm1:  vnet0 52:54:00:0f:46:43 ipv4 192.168.122.212/24
+rhel7.8:  vnet1 52:54:00:a1:84:a6 ipv4 192.168.122.174/24
+ocp4-lb:  vnet2 52:54:00:e5:d2:07 ipv4 192.168.122.206/24
+ocp4-master-1:  vnet4 52:54:00:83:7b:7a ipv4 192.168.122.216/24
+ocp4-master-2:  vnet5 52:54:00:de:f6:02 ipv4 192.168.122.215/24
+ocp4-master-3:  vnet6 52:54:00:c2:8e:00 ipv4 192.168.122.123/24
+ocp4-worker-1:  vnet7 52:54:00:32:e5:d7 ipv4 192.168.122.157/24
+ocp4-worker-2:  vnet8 52:54:00:0b:a9:5c ipv4 192.168.122.109/24
 ----
