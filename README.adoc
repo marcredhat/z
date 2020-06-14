@@ -1,7 +1,5 @@
 ----
 # virsh list
- Id    Name                           State
-----------------------------------------------------
  10    rhel7.8                        running
  11    vm1                            running
  27    ocp4-lb                        running
