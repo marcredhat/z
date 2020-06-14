@@ -19,6 +19,11 @@ Red Hat Enterprise Linux Server release 7.9 Beta (Maipo)
 ----
 
 ----
+To deploy OpenShift, I used Khizer Naeem's automated script: 
+https://github.com/kxr/ocp4_setup_upi_kvm/
+----
+
+----
 # oc version
 Client Version: 4.4.6
 Server Version: 4.4.5
