@@ -43,7 +43,7 @@ The result is similar to
 ----
 
 ----
-awk '{ print "curl -L https://api.box.com/2.0/files/" $1 "\/content -H \"Authorization: Bearer tst16jTDZmvrZaO6GSpG4OcUxfUlQDGPPSY\" -o "  $2 " &>/dev/null &"}' 2files.txt
+awk '{ print "curl -L https://api.box.com/2.0/files/" $1 "\/content -H \"Authorization: Bearer tst16jTDZmvrZaO6GSpG4OcUxfUlQDGPPSY\" -o "  $2 " &>/dev/null &"}' 2files.txt | tee getfiles.sh
 The result is similar to:
 ....
 curl -L https://api.box.com/2.0/files/663365718383/content -H "Authorization: Bearer tst16jTDZmvrZaO6GSpG4OcUxfUlQDGPPSY" -o "ADCDTOOLS.XML" &>/dev/null &
