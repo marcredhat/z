@@ -3,6 +3,9 @@
 pip3 install boxsdk --user
 ----
 
+----
+The "access_token" in the python code and the Bearer token in the curl command are the obtained from the Box Developer Console / Configuration / Generate Developer Token
+----
 
 ----
 from boxsdk import OAuth2, Client
