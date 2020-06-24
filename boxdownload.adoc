@@ -26,13 +26,28 @@ for item in items:
 
 
 ----
-python3 box.py
+python3 box.py > 1 files.txt
 The result is similar to 
 File 663383937486 is named "SARES1.ZPD"
 File 663387720125 is named "ZDTRKT.gz"
 File 663380746453 is named "ZDT_Install_EE_V12.0.5.0.tgz"
 ----
 
+
 ----
-awk '{ print "curl -L https://api.box.com/2.0/files/" $1 "\/content -H \"Authorization: Bearer tstqBT2dMfz3LF3YymMvP3McBhUtZM6yOTQ\" -o "  $2 " &>/dev/null &"}' 2files.txt
+awk '{print $2 " " $5}' 1files.txt > 2files.txt
+The result is similar to
+663383937486 "SARES1.ZPD"
+663387720125 "ZDTRKT.gz"
+663380746453 "ZDT_Install_EE_V12.0.5.0.tgz"
 ----
+
+----
+awk '{ print "curl -L https://api.box.com/2.0/files/" $1 "\/content -H \"Authorization: Bearer tst16jTDZmvrZaO6GSpG4OcUxfUlQDGPPSY\" -o "  $2 " &>/dev/null &"}' 2files.txt
+The result is similar to:
+....
+curl -L https://api.box.com/2.0/files/663365718383/content -H "Authorization: Bearer tst16jTDZmvrZaO6GSpG4OcUxfUlQDGPPSY" -o "ADCDTOOLS.XML" &>/dev/null &
+....
+----
+
+
