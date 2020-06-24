@@ -1,0 +1,38 @@
+
+----
+pip3 install boxsdk --user
+----
+
+
+----
+from boxsdk import OAuth2, Client
+
+auth = OAuth2(
+    client_id='',
+    client_secret='',
+    access_token='',
+)
+client = Client(auth)
+
+#user = client.user().get()
+#print('The current user ID is {0}'.format(user.id))
+
+
+items = client.folder(folder_id='112498039397').get_items()
+for item in items:
+    print('{0} {1} is named "{2}"'.format(item.type.capitalize(), item.id, item.name))
+----
+
+
+
+----
+python3 box.py
+The result is similar to 
+File 663383937486 is named "SARES1.ZPD"
+File 663387720125 is named "ZDTRKT.gz"
+File 663380746453 is named "ZDT_Install_EE_V12.0.5.0.tgz"
+----
+
+----
+awk '{ print "curl -L https://api.box.com/2.0/files/" $1 "\/content -H \"Authorization: Bearer tstqBT2dMfz3LF3YymMvP3McBhUtZM6yOTQ\" -o "  $2 " &>/dev/null &"}' 2files.txt
+----
