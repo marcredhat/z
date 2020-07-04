@@ -126,6 +126,8 @@ ocp4-master-1.qcow2  ocp4-master-3.qcow2  ocp4-worker-2.qcow2  rhel-server-7.9-b
 virt-install --name vm1 --memory 8192 --vcpus 4 --disk size=1000 --os-variant rhel7.0 --cdrom /var/lib/libvirt/images/rhel-server-7.9-beta-1-x86_64-dvd.iso
 
 ssh -X  marc@dell-r730-001
+sudo usermod --append --groups libvirt `whoami`
+export LIBGL_ALWAYS_INDIRECT=y
 [marc@dell-r730-001 ~]$ xauth
 Using authority file /home/marc/.Xauthority
 xauth> exit
