@@ -321,6 +321,16 @@ Repeat for vm2
 ----
 
 ----
+On both vm1 and vm2:
+yum  whatprovides fuser
+yum -y install psmisc-22.20-11.el7.x86_64
+fuser -kim /dev/rhel_vm1/home
+umount -f /dev/rhel_vm1/home
+lvremove /dev/rhel_vm1/home
+lvextend -An -l +100%FREE -r /dev/rhel_vm1/root
+----
+
+----
 Install packages on vm1 and vm2
 
 yum -y install vim policycoreutils-python zip bind-utils wget tar gcc python3-devel python3  libguestfs-tools-c tmux httpd-tools git nc net-tools
