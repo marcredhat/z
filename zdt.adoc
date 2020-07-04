@@ -276,7 +276,10 @@ Registering to: subscription.rhsm.redhat.com:443/subscription
 
 
 [root@vm1 volumes]# subscription-manager attach --pool <pool>
+----
 
+
+----
 Repeat for vm2
 ----
 
@@ -286,7 +289,15 @@ Install packages on vm1 and vm2
 yum -y install  bind-utils wget tar gcc python3-devel python3  libguestfs-tools-c tmux httpd-tools git nc net-tools
 ----
 
+----
+[root@vm1 ~]# subscription-manager repos --enable rhel-server-rhscl-7-rpms
+yum whatprovides pip3
+yum -y install python3-pip-9.0.3-5.el7.noarch
+----
 
+----
+Repeat for vm2
+----
 
 == Download ZD&T installation files to vm1
 
