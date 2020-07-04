@@ -76,3 +76,27 @@ Login Succeeded!
 ----
 (molecule_ansible) [root@dell-r730-001 marc-role]# MOLECULE_NO_LOG="false" ANSIBLE_SSH_PIPELINING=False molecule test
 ----
+
+== Install OpenShift 4
+
+----
+(molecule_ansible) [marc@dell-r730-001 marc-role]$ deactivate
+[marc@dell-r730-001 marc-role]$ su -
+Password:
+----
+
+----
+As root,
+[root@dell-r730-001 ~]# echo -e "[main]\ndns=dnsmasq" > /etc/NetworkManager/conf.d/nm-dns.conf
+[root@dell-r730-001 ~]# systemctl restart NetworkManager
+----
+
+
+----
+copy cloud.redhat.com/openshift/install/pull-secret to /root/pull-secret
+----
+
+
+----
+git clone https://github.com/kxr/ocp4_setup_upi_kvm.git
+----
