@@ -379,11 +379,36 @@ tar -xzvf ZDT_Install_EE_V12.0.5.0.tgz
 
 ./ZDT_Install_EE_V12.0.5.0.x86_64
 
-./ZDT_Install_EE_V12.0.5.0.x86_64 --install --zdtswlicense --ackVM --dep 
+./ZDT_Install_EE_V12.0.5.0.x86_64 
 
-./ZDT_Install_EE_V12.0.5.0.x86_64 --install --zdtswlicense --ackVM 
 ----
 
+----
+Select 1:
+[root@vm1 volumes]# ./ZDT_Install_EE_V12.0.5.0.x86_64
+The following products can be installed, updated, or uninstalled. Select one action:
+	 1) ZD&T Enterprise Edition
+		A simple role-based Web utility to ease the process of creating
+		and managing your IBM ZD&T instances.
+		It includes features to create assets, monitor and
+		automatically configure, install and deploy to target systems.
+		This offering can be installed on the same system as
+		the ZD&T Hardware-Based License Server and as the
+		ZD&T Software-Based License Server
+----
+
+
+----
+[root@vm1 volumes]# /opt/ibm/zDT/bin/startServer.sh
+Creating zdtee postgresql database...
+Database creation success
+Starting the IBM Z Development and Test Environment Enterprise Edition server:  sudo -H -u zdt /opt/ibm/zDT/bin/zdtee_cmd.sh start
+
+Starting server zDTServer.
+
+Server zDTServer started with process ID 21516.
+IBM Z Development and Test Environment Enterprise Edition can be accessed using the following URL: https://vm1:9443/ZDTMC/index.html
+----
 
 ----
 ....
