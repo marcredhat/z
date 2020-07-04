@@ -170,8 +170,13 @@ xauth> exit
 ----
 
 ----
-Video of RHEL 7.9 KVM guest installation at 
+Video of RHEL 7.9 KVM guest installation at https://bit.ly/marcredhatz1
 ----
+
+----
+At the end of the installation, go back to the virt-manager window and click on "Reboot"
+----
+
 
 ----
 [marc@dell-r730-001 ~]$ sudo virt-install --name vm2 --memory 32000 --vcpus 8 --disk size=2000 --os-variant rhel7.0 --cdrom /var/lib/libvirt/images/rhel-server-7.9-beta-1-x86_64-dvd.iso
@@ -181,6 +186,9 @@ Video of RHEL 7.9 KVM guest installation at
 Same process as the in the video above to install RHEL 7.9 on the KVM guest. 
 ----
 
+----
+At the end of the installation, go back to the virt-manager window and click on "Reboot"
+----
 
 ----
 On KVM host, virsh dumpxml vm1 | more 
