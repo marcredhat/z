@@ -549,6 +549,10 @@ See https://github.com/marcredhat/z (zowe*.sh files)
 
 == Visual Studio Code configuration to work with our ZD&T EE mainframe
 
+NOTE: Recall that, on your laptop vm1 and vm2 point to 127.0.0.1 (using /etc/hosts) and you must be ssh'd into the baremetal server using port forwarding:
+Example: sudo ssh -X  root@<baremetal server> -L 9443:vm1:9443 -L 10443:vm2:10443 -L 443:console-openshift-console.apps.ocp4.local:443
 
+image:images/code.png[title="ZD&T"]
 
+image:images/code2.png[title="ZD&T"]
 
