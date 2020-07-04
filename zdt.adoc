@@ -197,12 +197,12 @@ So VM2 has MAC52:54:00:8e:5e:7c   (for virbr0)
 
 
 ----
-virsh net-update default add ip-dhcp-host \
+sudo virsh net-update default add ip-dhcp-host \
           "<host mac='52:54:00:73:d0:92' \
            name='vm1' ip='192.168.122.106' />" \
            --live --config
 
-virsh net-update default add ip-dhcp-host \
+sudo virsh net-update default add ip-dhcp-host \
           "<host mac='MAC52:54:00:8e:5e:7c' \
           name='vm2' ip='192.168.122.121' />" \
           --live --config
