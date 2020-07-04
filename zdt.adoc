@@ -114,3 +114,9 @@ cd /var/lib/libvirt/images/
 curl -L https://www.dropbox.com/s/hjyshonfi4vvdko/rhel-8.2-x86_64-dvd.iso?dl=1 -o /var/lib/libvirt/images/rhel-8.2-x86_64-dvd.iso
 curl -L https://www.dropbox.com/s/mj5ngjmoblboszx/rhel-server-7.9-beta-1-x86_64-dvd%20%281%29.iso?dl=1 -o /var/lib/libvirt/images/rhel-server-7.9-beta-1-x86_64-dvd.iso
 ----
+
+----
+[root@dell-r730-001 images]# ls
+ocp4-lb.qcow2        ocp4-master-2.qcow2  ocp4-worker-1.qcow2  rhel-8.2-x86_64-dvd.iso
+ocp4-master-1.qcow2  ocp4-master-3.qcow2  ocp4-worker-2.qcow2  rhel-server-7.9-beta-1-x86_64-dvd.iso
+----
