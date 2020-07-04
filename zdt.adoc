@@ -341,8 +341,10 @@ Repeat for vm2
 ----
 [root@vm1 volumes]# pwd
 /Z/adcd/nov2019/volumes
+----
 
 image:images/box.png[title="Box"]
 
+----
 Follow https://github.com/marcredhat/z/blob/master/boxdownload.adoc
 ----
