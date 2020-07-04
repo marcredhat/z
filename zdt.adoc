@@ -336,6 +336,14 @@ Install packages on vm1 and vm2
 yum -y install vim policycoreutils-python zip bind-utils wget tar gcc python3-devel python3  libguestfs-tools-c tmux httpd-tools git nc net-tools
 ----
 
+
+----
+yum -y install vsftpd ftp
+systemctl enable vsftpd
+systemctl start  vsftpd
+----
+
+
 ----
 [root@vm1 ~]# subscription-manager repos --enable rhel-server-rhscl-7-rpms
 yum whatprovides pip3
