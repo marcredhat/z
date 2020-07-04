@@ -468,3 +468,9 @@ sudo semanage port -a -t http_port_t -p tcp 9443
 sudo semanage port -a -t http_port_t -p tcp 9451
 sudo semanage port -a -t http_port_t -p tcp 10443
 ----
+
+
+----
+On your laptop,
+sudo ssh -X  root@<baremetal host> -L 9443:vm1:9443 -L 10443:vm2:10443 -L 7777:vm1:7777 -L 7777:vm2:7777 -L 443:console-openshift-console.apps.ocp4.local:44
+----
