@@ -20,7 +20,7 @@ yum -y install psmisc-23.1-4.el8.x86_64
 
 ----
 If you are on baremetal server from Beaker, remove the home partition and extend the root partition to all remaining space.
-If not, skip the 5 command below but make sure you have enough disk space available (2000 GB).
+If not, skip the 5 commands below but make sure you have enough disk space available (2000 GB).
 ----
 
 ----
