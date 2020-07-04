@@ -1,4 +1,10 @@
 
+== Install OpenShift 4 clusters, emulated mainframe (ZD&T EE) and Ansible/molecule/podman 
+== for Ansible/Z and Cloud Broker testing
+
+== Requirements: x86_64 baremetal server with RHEL 8.2
+
+NOTE: we can share a baremetal server from Beaker/DSAL.
 
 ----
 yum whatprovides fuser
@@ -13,6 +19,11 @@ yum -y install psmisc-23.1-4.el8.x86_64
 ----
 
 ----
+If you are on baremetal server from Beaker, remove the home partition and extend the root partition to all remaining space.
+If not, skip the 5 command below but make sure you have enough disk space available (2000 GB).
+----
+
+----
 lvdisplay | grep home
   LV Path                /dev/rhel_dell-r730-001/home
 fuser -kim /dev/rhel_dell-r730-001/home
@@ -21,6 +32,7 @@ lvremove /dev/rhel_dell-r730-001/home
 lvextend -An -l +100%FREE -r /dev/rhel_dell-r730-001/root
 ----
 
+== Create users
 
 ----
 adduser --home /home/ibmsys1  ibmsys1
@@ -29,6 +41,8 @@ usermod -aG wheel ibmsys1
 usermod -aG wheel marc
 ----
 
+== Register / subscribe / install packages
+
 ----
 subscription-manager register 
 subscription-manager attach --pool <pool>
@@ -36,6 +50,14 @@ dnf -y update && dnf -y upgrade
 dnf -y install podman buildah skopeo libvirt*  bind-utils wget tar gcc python3-devel python3  xauth virt-install virt-viewer virt-manager libguestfs-tools-c tmux httpd-tools git x3270-x11 xorg-x11-apps nc net-tools
 systemctl start libvirtd.service
 systemctl enable libvirtd
+----
+
+== Install molecule/podman to facilitate testing of Ansible/Z roles and collections.
+
+
+----
+A working example of molecule spinning RHEL 7 and 8 containers (using podman) to test Ansible roles 
+is provided below
 ----
 
 ----
