@@ -108,25 +108,36 @@ git clone https://github.com/kxr/ocp4_setup_upi_kvm.git
 
 == Connect to OpenShift 4 console
 
+----
 [root@dell-r730-001 ~]# cat /root/ocp4_setup_ocp4/install_dir/auth/kubeadmin-password
+----
 
 
+----
 On your laptop, change /etc/hosts so that
 console-openshift-console.apps.ocp4.local and
 oauth-openshift.apps.ocp4.local
 point to 127.0.0.1
+----
 
+----
 sudo ssh -X  root@dell-r730-001.dsal.lab.eng.rdu2.redhat.com -L 443:console-openshift-console.apps.ocp4.local:443
+----
 
+----
 [root@dell-r730-001 ~]# xauth
 Using authority file /root/.Xauthority
-xauth>
+xauth>exit
+----
 
+
+----
 Browse to https://console-openshift-console.apps.ocp4.local/
+----
 
-
+----
 Connect as kubeadmin/<password from /root/ocp4_setup_ocp4/install_dir/auth/kubeadmin-password>
-
+----
 
 == Adding KVM guests
 
