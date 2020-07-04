@@ -540,3 +540,15 @@ image:images/manage.png[title="ZD&T"]
 image:images/manage2.png[title="ZD&T"]
 
 image:images/manage3.png[title="ZD&T"]
+
+
+== Examples of using the Zowe CLI to upload (COBOL) files to our mainframe, list jobs etc 
+
+See https://github.com/marcredhat/z (zowe*.sh files)
+
+
+== Visual Studio Code configuration to work with our ZD&T EE mainframe
+
+
+
+
