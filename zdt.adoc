@@ -22,13 +22,12 @@ lvextend -An -l +100%FREE -r /dev/rhel_dell-r730-001/root
 ----
 
 
------
+----
 adduser --home /home/ibmsys1  ibmsys1
 adduser --home /home/marc  marc
 usermod -aG wheel ibmsys1
 usermod -aG wheel marc
 ----
-
 
 ----
 subscription-manager register 
