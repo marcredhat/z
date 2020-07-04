@@ -29,7 +29,7 @@ for item in items:
 
 
 ----
-python3 box.py > 1 files.txt
+python3 box.py > 1files.txt
 The result is similar to 
 File 663383937486 is named "SARES1.ZPD"
 File 663387720125 is named "ZDTRKT.gz"
