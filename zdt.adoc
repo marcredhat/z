@@ -203,7 +203,7 @@ sudo virsh net-update default add ip-dhcp-host \
            --live --config
 
 sudo virsh net-update default add ip-dhcp-host \
-          "<host mac='MAC52:54:00:8e:5e:7c' \
+          "<host mac='52:54:00:8e:5e:7c' \
           name='vm2' ip='192.168.122.121' />" \
           --live --config
 ----
