@@ -183,3 +183,12 @@ On KVM host, virsh dumpxml vm2 | more
 ----
 So VM2 has MAC52:54:00:8e:5e:7c   (for virbr0)
 ----
+
+
+----
+[marc@dell-r730-001 ~]$ sudo virsh domifaddr vm1
+ vnet1      52:54:00:73:d0:92    ipv4         192.168.122.106/24
+
+[marc@dell-r730-001 ~]$ sudo virsh domifaddr vm2
+ vnet7      52:54:00:8e:5e:7c    ipv4         192.168.122.121/24
+----
