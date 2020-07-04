@@ -142,6 +142,31 @@ Connect as kubeadmin/<password from /root/ocp4_setup_ocp4/install_dir/auth/kubea
 
 image:images/ocp4.png[title="OpenShift 4.4 Console"]
 
+
+----
+Create image registry
+Follow the steps at
+https://github.com/marcredhat/workshop/blob/master/imageregistry.adoc
+----
+
+----
+oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"storage":{"emptyDir":{}}}}'
+oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"managementState": "Managed"}}'
+----
+
+----
+Create user / authentication using htpasswd
+Follow the steps at
+https://github.com/marcredhat/workshop/blob/master/userauth_htpasswd.adoc
+----
+
+----
+Configure AlertManager
+Follow the steps at
+https://blog.openshift.com/openshift-4-3-alertmanager-configuration/
+----
+
+
 == Adding KVM guests
 
 ----
