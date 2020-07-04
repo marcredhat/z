@@ -348,3 +348,39 @@ image:images/box.png[title="Box"]
 ----
 Follow https://github.com/marcredhat/z/blob/master/boxdownload.adoc
 ----
+
+----
+[root@vm1 volumes]# ls
+A4BLZ1.gz  A4DBAR.gz  A4DBC2.gz  A4IME1.gz  A4PAGA.gz  A4PRD2.gz   A4RES2.gz  A4USS2.gz  ADCDTOOLS.XML         SARES1.ZPD
+A4C541.gz  A4DBB1.gz  A4DIS1.gz  A4IMF1.gz  A4PAGB.gz  A4PRD3.gz   A4SYS1.gz  A4W901.gz  dlmgr.pro             ZDT_Install_EE_V12.0.5.0.tgz
+A4C551.gz  A4DBB2.gz  A4DIS2.gz  A4INM1.gz  A4PAGC.gz  A4PRD4.gz   A4USR1.gz  A4W902.gz  ee.md5                ZDTRKT.gz
+A4CFG1.gz  A4DBC1.gz  A4DIS3.gz  A4KAN1.gz  A4PRD1.gz  A4RES1.ZPD  A4USS1.gz  A4ZCX1.gz  nov2019_adcd_md5.txt
+----
+
+----
+chmod 755 ZDT_Install_EE_V12.0.5.0.tgz
+
+tar -xzvf ZDT_Install_EE_V12.0.5.0.tgz
+
+./ZDT_Install_EE_V12.0.5.0.x86_64
+
+./ZDT_Install_EE_V12.0.5.0.x86_64 --install --zdtswlicense --ackVM 
+----
+
+
+----
+....
+To start the uimserver , using a non-root id,
+  execute : /usr/z1090/bin/uimserverstart
+
+
+ To generate a License request, issue command :
+     /opt/IBM/LDK/request_license
+  and then send the resulting file to
+  your IBM representative.
+2020-07-04_04:24:23:  uimserver started successfully.
+Using port 9451  IPv4
+
+The installer has created the non-root user id "ibmsys1" with a generated password.
+Do not forget to change the password of this account
+----
