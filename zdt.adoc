@@ -269,6 +269,16 @@ Note that the other entries have been added by the OCP 4 automated installation 
 192.168.122.121 vm2
 ----
 
+----
+Add subscriptions to vm1 and VM2
+[root@vm1 volumes]# subscription-manager register
+Registering to: subscription.rhsm.redhat.com:443/subscription
+
+
+[root@vm1 volumes]# subscription-manager attach --pool <pool>
+----
+
+
 == Download ZD&T installation files to vm1
 
 ----
