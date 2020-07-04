@@ -137,5 +137,12 @@ xauth> exit
 [marc@dell-r730-001 ~]$ virt-manager
 ----
 
+----
+Video of RHEL 7.9 KVM guest installation at 
+----
+
+----
+[marc@dell-r730-001 ~]$ sudo virt-install --name vm2 --memory 32000 --vcpus 8 --disk size=2000 --os-variant rhel7.0 --cdrom /var/lib/libvirt/images/rhel-server-7.9-beta-1-x86_64-dvd.iso
+----
 
 
