@@ -144,6 +144,18 @@ image:images/ocp4.png[title="OpenShift 4.4 Console"]
 
 
 ----
+[root@dell-r730-001 ~]# cp /root/ocp4_setup_ocp4/oc /usr/bin
+[root@dell-r730-001 ~]# cp /root/ocp4_setup_ocp4/install_dir/auth/kubeconfig ~/.kube/config
+----
+
+----
+ssh to the OpenShift 4 nodes:
+oc get nodes
+Example: ssh -i /root/ocp4_setup_ocp4/sshkey core@master-1.ocp4.local
+----
+
+
+----
 Create image registry
 Follow the steps at
 https://github.com/marcredhat/workshop/blob/master/imageregistry.adoc
