@@ -323,7 +323,7 @@ Repeat for vm2
 ----
 Install packages on vm1 and vm2
 
-yum -y install  bind-utils wget tar gcc python3-devel python3  libguestfs-tools-c tmux httpd-tools git nc net-tools
+yum -y install zip bind-utils wget tar gcc python3-devel python3  libguestfs-tools-c tmux httpd-tools git nc net-tools
 ----
 
 ----
@@ -383,4 +383,17 @@ Using port 9451  IPv4
 
 The installer has created the non-root user id "ibmsys1" with a generated password.
 Do not forget to change the password of this account
+----
+
+----
+[root@vm1 volumes]# passwd ibmsys1
+----
+
+----
+[root@vm1 volumes]# /opt/IBM/LDK/request_license
+zPDT/LDK license request started.
+fingerprint status 0
+The request file created is: ~/vm1_1593851286.zip
+
+Success
 ----
