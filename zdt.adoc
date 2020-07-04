@@ -268,3 +268,12 @@ Note that the other entries have been added by the OCP 4 automated installation 
 192.168.122.106 vm1
 192.168.122.121 vm2
 ----
+
+== Download ZD&T installation files to vm1
+
+----
+[root@vm1 volumes]# pwd
+/Z/adcd/nov2019/volumes
+
+Follow https://github.com/marcredhat/z/blob/master/boxdownload.adoc
+----
