@@ -139,6 +139,9 @@ Browse to https://console-openshift-console.apps.ocp4.local/
 Connect as kubeadmin/<password from /root/ocp4_setup_ocp4/install_dir/auth/kubeadmin-password>
 ----
 
+
+image:images/ocp4.png[title="OpenShift 4.4 Console"]
+
 == Adding KVM guests
 
 ----
