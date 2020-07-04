@@ -201,7 +201,7 @@ https://blog.openshift.com/openshift-4-3-alertmanager-configuration/
 ----
 
 
-== Adding KVM guests
+== Adding KVM guests for ZD&T EE
 
 ----
 cd /var/lib/libvirt/images/
@@ -506,7 +506,7 @@ Last login: Sat Jul  4 04:34:32 EDT 2020 on pts/1
 ----
 
 ----
-SELinux to allow httpd with non-standard ports
+On both vm1 and vm2, configure SELinux to allow httpd with non-standard ports
 sudo semanage port -a -t http_port_t -p tcp 9443
 sudo semanage port -a -t http_port_t -p tcp 9451
 sudo semanage port -a -t http_port_t -p tcp 10443
