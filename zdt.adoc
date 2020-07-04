@@ -417,6 +417,21 @@ IBM Z Development and Test Environment Enterprise Edition can be accessed using 
 ----
 
 ----
+Install ZD&T Software-Based License Server
+----
+
+----
+[root@vm1 volumes]# ./ZDT_Install_EE_V12.0.5.0.x86_64
+
+Select 2) ZD&T Software-Based License Server
+          A server for centralized management of software-based license
+		keys for one or more instances of ZD&T.
+		This offering cannot be installed on the same system as
+		ZD&T Hardware-Based License Server but can be on the same system
+		as the ZD&T Enterprise Edition.
+----
+
+----
 ....
 To start the uimserver , using a non-root id,
   execute : /usr/z1090/bin/uimserverstart
