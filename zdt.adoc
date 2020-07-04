@@ -20,3 +20,23 @@ umount -f /dev/rhel_dell-r730-001/home
 lvremove /dev/rhel_dell-r730-001/home
 lvextend -An -l +100%FREE -r /dev/rhel_dell-r730-001/root
 ----
+
+
+-----
+adduser --home /home/ibmsys1  ibmsys1
+adduser --home /home/marc  marc
+usermod -aG wheel ibmsys1
+usermod -aG wheel marc
+----
+
+
+----
+subscription-manager register 
+subscription-manager attach --pool <pool>
+dnf -y update && dnf -y upgrade
+dnf -y install podman buildah skopeo libvirt*  bind-utils wget tar gcc python3-devel python3  virt-install virt-viewer virt-manager libguestfs-tools-c tmux httpd-tools git x3270-x11 xorg-x11-apps nc net-tools
+systemctl start libvirtd.service
+systemctl enable libvirtd
+----
+
+
