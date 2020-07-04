@@ -118,8 +118,14 @@ point to 127.0.0.1
 
 sudo ssh -X  root@dell-r730-001.dsal.lab.eng.rdu2.redhat.com -L 443:console-openshift-console.apps.ocp4.local:443
 
-https://console-openshift-console.apps.ocp4.local/
-kubeadmin/<password from /root/ocp4_setup_ocp4/install_dir/auth/kubeadmin-password>
+[root@dell-r730-001 ~]# xauth
+Using authority file /root/.Xauthority
+xauth>
+
+Browse to https://console-openshift-console.apps.ocp4.local/
+
+
+Connect as kubeadmin/<password from /root/ocp4_setup_ocp4/install_dir/auth/kubeadmin-password>
 
 
 == Adding KVM guests
