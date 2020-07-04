@@ -145,4 +145,41 @@ Video of RHEL 7.9 KVM guest installation at
 [marc@dell-r730-001 ~]$ sudo virt-install --name vm2 --memory 32000 --vcpus 8 --disk size=2000 --os-variant rhel7.0 --cdrom /var/lib/libvirt/images/rhel-server-7.9-beta-1-x86_64-dvd.iso
 ----
 
+----
+Same process as the in the video above to install RHEL 7.9 on the KVM guest. 
+----
 
+
+----
+On KVM host, virsh dumpxml vm1 | more 
+<interface type='network'>
+      <mac address='52:54:00:73:d0:92'/>
+      <source network='default' bridge='virbr0'/>
+      <target dev='vnet1'/>
+      <model type='virtio'/>
+      <alias name='net0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+    </interface>
+    <serial type='pty'>
+----
+
+----
+So VM1 has MAC 52:54:00:73:d0:92 (for virbr0)
+----
+
+
+----
+On KVM host, virsh dumpxml vm2 | more 
+<interface type='network'>
+      <mac address='52:54:00:8e:5e:7c'/>
+      <source network='default' bridge='virbr0'/>
+      <target dev='vnet7'/>
+      <model type='virtio'/>
+      <alias name='net0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+</interface>
+----
+
+----
+So VM2 has MAC52:54:00:8e:5e:7c   (for virbr0)
+----
