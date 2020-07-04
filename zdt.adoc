@@ -50,3 +50,25 @@ python3 -m virtualenv molecule_ansible
 source molecule_ansible/bin/activate
 pip3 install ansible testinfra molecule podman python-vagrant ansible-lint flake8 molecule[lint] molecule[podman]
 ----
+
+----
+(molecule_ansible) [marc@dell-r730-001 ~]$ molecule init role marc-role --driver-name podman
+--> Initializing new role marc-role...
+Initialized role in /home/marc/marc-role successfully.
+----
+
+
+----
+cd marc-role/molecule/default
+wget https://raw.githubusercontent.com/marcredhat/molecule/master/molecule.yml
+wget https://raw.githubusercontent.com/marcredhat/molecule/master/verify.yml
+cd ../..
+----
+
+----
+(molecule_ansible) [marc@dell-r730-001 marc-role]$ su root
+Password:
+(molecule_ansible) [root@dell-r730-001 marc-role]# podman  login -u="<user>"   https://registry.redhat.io
+Password:
+Login Succeeded!
+----
