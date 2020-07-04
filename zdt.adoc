@@ -39,4 +39,14 @@ systemctl start libvirtd.service
 systemctl enable libvirtd
 ----
 
+----
+su - marc
+[marc@dell-r730-001 ~]$ pip3 install ansible --user
+[marc@dell-r730-001 ~]$ pip3 install virtualenv --user
+----
 
+----
+python3 -m virtualenv molecule_ansible
+source molecule_ansible/bin/activate
+pip3 install ansible testinfra molecule podman python-vagrant ansible-lint flake8 molecule[lint] molecule[podman]
+----
