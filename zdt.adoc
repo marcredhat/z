@@ -336,6 +336,11 @@ yum -y install python3-pip-9.0.3-5.el7.noarch
 Repeat for vm2
 ----
 
+----
+On both vm1 and vm2:
+systemctl stop firewalld && systemctl disable firewalld
+----
+
 == Download ZD&T installation files to vm1
 
 ----
@@ -363,6 +368,8 @@ chmod 755 ZDT_Install_EE_V12.0.5.0.tgz
 tar -xzvf ZDT_Install_EE_V12.0.5.0.tgz
 
 ./ZDT_Install_EE_V12.0.5.0.x86_64
+
+./ZDT_Install_EE_V12.0.5.0.x86_64 --install --zdtswlicense --ackVM --dep 
 
 ./ZDT_Install_EE_V12.0.5.0.x86_64 --install --zdtswlicense --ackVM 
 ----
