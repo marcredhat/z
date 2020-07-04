@@ -385,6 +385,13 @@ The installer has created the non-root user id "ibmsys1" with a generated passwo
 Do not forget to change the password of this account
 ----
 
+
+----
+[root@vm1 volumes]# rpm -qa | grep zpdt
+zpdtldk-1-10.55.04.x86_64
+zpdtuim-1-10.55.04.x86_64
+----
+
 ----
 [root@vm1 volumes]# passwd ibmsys1
 ----
