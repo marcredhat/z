@@ -100,3 +100,8 @@ copy cloud.redhat.com/openshift/install/pull-secret to /root/pull-secret
 ----
 git clone https://github.com/kxr/ocp4_setup_upi_kvm.git
 ----
+
+----
+[root@dell-r730-001 ~]# cd ocp4_setup_upi_kvm/
+[root@dell-r730-001 ocp4_setup_upi_kvm]# ./ocp4_setup_upi_kvm.sh --ocp-version 4.4.stable
+----
