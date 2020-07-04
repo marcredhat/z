@@ -539,4 +539,4 @@ image:images/manage.png[title="ZD&T"]
 
 image:images/manage2.png[title="ZD&T"]
 
-image:images/managee.png[title="ZD&T"]
+image:images/manage3.png[title="ZD&T"]
