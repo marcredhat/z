@@ -133,5 +133,9 @@ Using authority file /home/marc/.Xauthority
 xauth> exit
 ----
 
+----
+[marc@dell-r730-001 ~]$ virt-manager
+----
+
 
 
