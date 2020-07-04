@@ -404,3 +404,11 @@ The request file created is: ~/vm1_1593851286.zip
 
 Success
 ----
+
+
+----
+[root@vm1 ~]# usermod -aG wheel ibmsys1
+[root@vm1 ~]# su - ibmsys1
+Last login: Sat Jul  4 04:34:32 EDT 2020 on pts/1
+[ibmsys1@vm1 ~]$ chown -R ibmsys1 /home/ibmsys1/
+----
