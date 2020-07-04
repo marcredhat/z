@@ -1,0 +1,22 @@
+
+
+----
+yum whatprovides fuser
+....
+psmisc-23.1-4.el8.x86_64 : Utilities for managing processes on your system
+....
+----
+
+
+----
+yum -y install psmisc-23.1-4.el8.x86_64
+----
+
+----
+lvdisplay | grep home
+  LV Path                /dev/rhel_dell-r730-001/home
+fuser -kim /dev/rhel_dell-r730-001/home
+umount -f /dev/rhel_dell-r730-001/home
+lvremove /dev/rhel_dell-r730-001/home
+lvextend -An -l +100%FREE -r /dev/rhel_dell-r730-001/root
+----
