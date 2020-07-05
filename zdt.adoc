@@ -2,11 +2,13 @@
 == Install OpenShift 4 clusters, emulated mainframe (ZD&T EE) and Ansible/molecule/podman 
 == for Ansible/Z and Cloud Broker testing
 
-NOTE: Requirements: 
+NOTE: Requirements.
 ----
 Internet-connected x86_64 baremetal server with RHEL 8.2; also works with RHEL 7 (just replace dnf with yum).
+
 Sufficient CPU/Memory and virtualization support for KVM/libvirt.
-Virtualization support enabled in BIOS of the host
+
+Virtualization support enabled in the host's BIOS.
 ----
 
 NOTE: we can share a baremetal server from Beaker/DSAL.
