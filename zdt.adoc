@@ -85,7 +85,7 @@ usermod -aG wheel marc
 subscription-manager register 
 subscription-manager attach --pool <pool>
 dnf -y update && dnf -y upgrade
-dnf -y install podman buildah skopeo libvirt*  bind-utils wget tar gcc python3-devel python3  xauth virt-install virt-viewer virt-manager libguestfs-tools-c tmux httpd-tools git x3270-x11 xorg-x11-apps nc net-tools
+dnf -y install zip podman buildah skopeo libvirt*  bind-utils wget tar gcc python3-devel python3  xauth virt-install virt-viewer virt-manager libguestfs-tools-c tmux httpd-tools git x3270-x11 xorg-x11-apps nc net-tools
 systemctl start libvirtd.service
 systemctl enable libvirtd
 ----
@@ -280,6 +280,11 @@ sudo ssh root@<KVM host>  -L 443:console-openshift-console.apps.ocp45.local:443 
 You can now browse to https://console-openshift-console.apps.ocp45.local on your laptop.
 ----
 
+
+----
+You can easily switch between your OpenShift clusters, 
+see https://github.com/marcredhat/z/blob/master/switchtoocp44.sh and https://github.com/marcredhat/z/blob/master/switchtoocp45.sh
+----
 
 == Adding KVM guests for ZD&T EE
 
