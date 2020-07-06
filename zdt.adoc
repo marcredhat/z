@@ -132,6 +132,16 @@ git clone https://github.com/kxr/ocp4_setup_upi_kvm.git
 
 ----
 [root@dell-r730-001 ~]# cd ocp4_setup_upi_kvm/
+----
+
+NOTE: Change CPUs, disk and memory values for masters and workers according to your requirements:
+----
+In /ocp4_setup_upi_kvm.sh:
+Edit the default values for memory and CPUs (BTS_MEM and BTS_CPU)
+Edit disk, currently hardcoded at 50GB (search for "size=")
+----
+
+----
 [root@dell-r730-001 ocp4_setup_upi_kvm]# ./ocp4_setup_upi_kvm.sh --ocp-version 4.4.stable
 ----
 
