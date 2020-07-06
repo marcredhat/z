@@ -6,8 +6,7 @@
 == Project goals
 
 ----
-1) Make it really easy to deploy and test Ansible/Z, Cloud Broker etc 
-with various OpenShift 4 releases.
+1) ** Make it really easy to deploy and test Ansible/Z, Cloud Broker etc with various OpenShift 4 releases. **
 
 We achieve this by fully automated installation of multiple OpenShift 4 clusters 
 on the same server as ZD&T EE to allow
