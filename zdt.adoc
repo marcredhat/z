@@ -234,8 +234,8 @@ Example - deploying an OpenShift 4.5 cluster alongside the existing 4.4 one depl
 Specify a new setup directory and cluster name as shown below:
 ./NEW_ocp4_setup_upi_kvm.sh --setup-dir /root/ocp4_setup_ocp45 --ocp-version 4.5.0-rc.6 --cluster-name ocp45
 
-/etc/hosts on laptop:
-127.0.0.1   localhost ... oauth-openshift.apps.ocp45.local console-openshift-console.apps.ocp45.local console-openshift-console.apps.ocp4.local oauth-openshift.apps.ocp45.local
+Add entries to /etc/hosts on laptop:
+127.0.0.1   localhost ... oauth-openshift.apps.ocp45.local console-openshift-console.apps.ocp45.local 
 
 sudo ssh root@<KVM host>  -L 443:console-openshift-console.apps.ocp45.local:443 -L 443:oauth-openshift.apps.ocp45.local:443
 
