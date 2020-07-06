@@ -149,6 +149,8 @@ sed 's/size=50/size=1000/g' ./ocp4_setup_upi_kvm.sh > ./NEW_ocp4_setup_upi_kvm.s
 [root@dell-r730-001 ocp4_setup_upi_kvm]# ./ocp4_setup_upi_kvm.sh --ocp-version 4.4.stable
 ----
 
+
+
 == Connect to OpenShift 4 console
 
 ----
@@ -219,6 +221,25 @@ https://github.com/marcredhat/workshop/blob/master/userauth_htpasswd.adoc
 Configure AlertManager
 Follow the steps at
 https://blog.openshift.com/openshift-4-3-alertmanager-configuration/
+----
+
+
+== Deploying multiple OpenShift clusters
+
+NOTE: You can deploy multiple OpenShift cluster with the same or different OpenShift versions on the same KVM host.
+
+----
+Example - deploying an OpenShift 4.5 cluster alongside the existing 4.4 one deployed above
+
+Specify a new setup directory and cluster name as shown below:
+./NEW_ocp4_setup_upi_kvm.sh --setup-dir /root/ocp4_setup_ocp45 --ocp-version 4.5.0-rc.6 --cluster-name ocp45
+
+/etc/hosts on laptop:
+127.0.0.1   localhost ... oauth-openshift.apps.ocp45.local console-openshift-console.apps.ocp45.local console-openshift-console.apps.ocp4.local oauth-openshift.apps.ocp45.local
+
+sudo ssh root@<KVM host>  -L 443:console-openshift-console.apps.ocp45.local:443 -L 443:oauth-openshift.apps.ocp45.local:443
+
+You can now browse to https://console-openshift-console.apps.ocp45.local on your laptop.
 ----
 
 
