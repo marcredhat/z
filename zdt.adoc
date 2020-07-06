@@ -156,6 +156,10 @@ As root,
 copy cloud.redhat.com/openshift/install/pull-secret to /root/pull-secret
 ----
 
+----
+We'll be using Khizer Naeem's automation (see also https://kxr.me/2019/08/17/openshift-4-upi-install-libvirt-kvm/)
+----
+
 
 ----
 git clone https://github.com/kxr/ocp4_setup_upi_kvm.git
@@ -175,6 +179,9 @@ Edit disk, currently hardcoded at 50GB (search for "size=")
 Example to change disk from 50GB to 1000GB for all masters and workers:
 sed 's/size=50/size=1000/g' ./ocp4_setup_upi_kvm.sh > ./NEW_ocp4_setup_upi_kvm.sh
 ----
+
+
+NOTE: during the install, you may see multiple "unknown error has occurred: MultipleErr" messages. Please be patient and ignore those.
 
 ----
 [root@dell-r730-001 ocp4_setup_upi_kvm]# ./ocp4_setup_upi_kvm.sh --ocp-version 4.4.stable
