@@ -2,6 +2,33 @@
 == Install OpenShift 4 clusters, emulated mainframe (ZD&T EE) and Ansible/molecule/podman 
 == for Ansible/Z and Cloud Broker testing
 
+
+== Project goals
+
+----
+1) Make it really easy to deploy and test Ansible/Z, Cloud Broker etc 
+with various OpenShift 4 releases.
+
+We achieve this by fully automated installation of multiple OpenShift 4 clusters 
+on the same server as ZD&T EE to allow
+*mainframe access (zcEE, z/OSMF etc) from the OpenShift nodes and pods*.
+
+
+2) Enable CI/CD scenarios with 
+frontends running on OpenShift and 
+backend running on mainframes.
+
+3) Overcome limitations of existing zTrial environments e.g.
+When testing the CICS Maven/Gradle bundle, we had issues with zTrials as the Internet access is restricted.
+https://github.com/IBM/cics-bundle-gradle/issues/69
+
+3) Allow full flexibility to test various mainframe component/subsystem versions:
+Example: We needed CICS TS 5.6 to test the Maven/Gradle CICS bundles; CICS TS 5.6 was not available with zTrial.
+
+With ZD&T, we can set up what we need (CICS TS 5.6, ZOAU etc) 
+----
+
+
 NOTE: Requirements.
 ----
 Internet-connected x86_64 baremetal server with RHEL 8.2; also works with RHEL 7 (just replace dnf with yum).
