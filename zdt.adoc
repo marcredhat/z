@@ -5,7 +5,9 @@
 
 == Project goals
 
+----
 **  Make it really easy to deploy and test Ansible/Z, Cloud Broker etc with various OpenShift 4 releases. **
+----
 
 ----
 We achieve this by fully automated installation of multiple OpenShift 4 clusters 
