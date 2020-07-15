@@ -204,7 +204,7 @@ point to 127.0.0.1
 ----
 
 ----
-sudo ssh -X  root@dell-r730-001.dsal.lab.eng.rdu2.redhat.com -L 443:console-openshift-console.apps.ocp4.local:443
+sudo ssh -X  root@dell-r730-001 -L 443:console-openshift-console.apps.ocp4.local:443
 ----
 
 ----
@@ -641,3 +641,4 @@ image:images/code.png[title="ZD&T"]
 
 image:images/code2.png[title="ZD&T"]
 
+f
