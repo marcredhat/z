@@ -161,6 +161,12 @@ We'll be using Khizer Naeem's automation (see also https://kxr.me/2019/08/17/ope
 ----
 
 ----
+If you are installing on CentOS 8:
+dnf -y module install virt
+----
+
+
+----
 dnf -y install zip podman buildah skopeo libvirt*  bind-utils wget tar gcc python3-devel python3  xauth virt-install virt-viewer virt-manager libguestfs-tools-c tmux httpd-tools git x3270-x11 xorg-x11-apps nc net-tools
 systemctl start libvirtd.service
 systemctl enable libvirtd
