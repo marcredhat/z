@@ -195,7 +195,7 @@ sed 's/size=50/size=1000/g' ./ocp4_setup_upi_kvm.sh > ./NEW_ocp4_setup_upi_kvm.s
 NOTE: during the install, you may see multiple "unknown error has occurred: MultipleErr" messages. Please be patient and ignore those.
 
 ----
-[root@dell-r730-001 ocp4_setup_upi_kvm]# ./ocp4_setup_upi_kvm.sh --ocp-version 4.4.stable
+[root@dell-r730-001 ocp4_setup_upi_kvm]# ./NEW_ocp4_setup_upi_kvm.sh --ocp-version 4.5.stable
 ----
 
 
