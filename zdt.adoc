@@ -155,7 +155,7 @@ We'll be using Khizer Naeem's automation (see also https://kxr.me/2019/08/17/ope
 ----
 
 ----
-dnf update
+dnf -y update
 ----
 
 ----
