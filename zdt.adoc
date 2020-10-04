@@ -208,6 +208,12 @@ Edit the default values for memory and CPUs (BTS_MEM and BTS_CPU)
 Edit disk, currently hardcoded at 50GB (search for "size=")
 Example to change disk from 50GB to 1000GB for all masters and workers:
 sed 's/size=50/size=1000/g' ./ocp4_setup_upi_kvm.sh > ./NEW_ocp4_setup_upi_kvm.sh
+
+If you are using a separate dnsmasq installed on the host set
+DNS_DIR=“/etc/dnsmasq.d”.
+
+If you are using NetworkManager’s embedded dnsmasq, keep the value as defined in ./NEW_ocp4_setup_upi_kvm.sh:
+DNS_DIR="/etc/NetworkManager/dnsmasq.d"
 ----
 
 
