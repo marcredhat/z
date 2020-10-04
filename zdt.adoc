@@ -141,8 +141,8 @@ Login Succeeded!
 
 ----
 As root,
-[root@dell-r730-001 ~]# echo -e "[main]\ndns=dnsmasq" > /etc/NetworkManager/conf.d/nm-dns.conf
-[root@dell-r730-001 ~]# systemctl restart NetworkManager
+echo -e "[main]\ndns=dnsmasq" > /etc/NetworkManager/conf.d/nm-dns.conf
+systemctl restart NetworkManager
 ----
 
 
@@ -168,10 +168,7 @@ systemctl enable libvirtd
 
 ----
 git clone https://github.com/kxr/ocp4_setup_upi_kvm.git
-----
-
-----
-[root@dell-r730-001 ~]# cd ocp4_setup_upi_kvm/
+cd ocp4_setup_upi_kvm/
 ----
 
 NOTE: Change CPUs, disk and memory values for masters and workers according to your requirements:
@@ -189,7 +186,7 @@ sed 's/size=50/size=1000/g' ./ocp4_setup_upi_kvm.sh > ./NEW_ocp4_setup_upi_kvm.s
 NOTE: during the install, you may see multiple "unknown error has occurred: MultipleErr" messages. Please be patient and ignore those.
 
 ----
-[root@dell-r730-001 ocp4_setup_upi_kvm]# ./NEW_ocp4_setup_upi_kvm.sh --ocp-version 4.5.stable
+./NEW_ocp4_setup_upi_kvm.sh --ocp-version 4.5.stable
 ----
 
 
