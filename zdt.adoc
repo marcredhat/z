@@ -139,15 +139,6 @@ Login Succeeded!
 
 == Install OpenShift 4
 
-----
-As root, setup a separate dnsmasq server on the host:
-
-dnf  -y install dnsmasq
-for x in $(virsh net-list --name); do virsh net-info $x | awk '/Bridge:/{print "except-interface="$2}'; done > /etc/dnsmasq.d/except-interfaces.conf
-sed -i '/^nameserver/i nameserver 127.0.0.1' /etc/resolv.conf
-systemctl restart dnsmasq
-systemctl enable dnsmasq
-----
 
 ----
 Append below lines in /etc/sysctl.conf:
@@ -191,6 +182,17 @@ dnf -y install zip podman buildah skopeo libvirt*  bind-utils wget tar gcc pytho
 systemctl start libvirtd.service
 systemctl enable libvirtd
 ----
+
+----
+As root, setup a separate dnsmasq server on the host:
+
+dnf  -y install dnsmasq
+for x in $(virsh net-list --name); do virsh net-info $x | awk '/Bridge:/{print "except-interface="$2}'; done > /etc/dnsmasq.d/except-interfaces.conf
+sed -i '/^nameserver/i nameserver 127.0.0.1' /etc/resolv.conf
+systemctl restart dnsmasq
+systemctl enable dnsmasq
+----
+
 
 ----
 git clone https://github.com/kxr/ocp4_setup_upi_kvm.git
