@@ -140,9 +140,31 @@ Login Succeeded!
 == Install OpenShift 4
 
 ----
-As root,
-echo -e "[main]\ndns=dnsmasq" > /etc/NetworkManager/conf.d/nm-dns.conf
-systemctl restart NetworkManager
+As root, setup a separate dnsmasq server on the host:
+
+dnf  -y install dnsmasq
+for x in $(virsh net-list --name); do virsh net-info $x | awk '/Bridge:/{print "except-interface="$2}'; done > /etc/dnsmasq.d/except-interfaces.conf
+sed -i '/^nameserver/i nameserver 127.0.0.1' /etc/resolv.conf
+systemctl restart dnsmasq
+systemctl enable dnsmasq
+----
+
+----
+Append below lines in /etc/sysctl.conf:
+
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+sysctl -p
+
+Add the AddressFamily line to sshd_config :
+
+# vi /etc/ssh/sshd_config
+....
+AddressFamily inet
+....
+Restart sshd for changes to get get effect :
+
+# systemctl restart sshd
 ----
 
 
