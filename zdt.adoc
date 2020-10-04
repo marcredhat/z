@@ -155,6 +155,10 @@ We'll be using Khizer Naeem's automation (see also https://kxr.me/2019/08/17/ope
 ----
 
 ----
+dnf update
+----
+
+----
 If you are installing on CentOS 8:
 dnf -y module install virt
 ----
