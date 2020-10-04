@@ -167,7 +167,7 @@ dnf -y module install virt
 
 
 ----
-dnf -y install zip podman buildah skopeo libvirt*  bind-utils wget tar gcc python3-devel python3  xauth virt-install virt-viewer virt-manager libguestfs-tools-c tmux httpd-tools git x3270-x11 xorg-x11-apps nc net-tools
+dnf -y install zip podman buildah skopeo libvirt*  bind-utils wget tar gcc python3-devel python3  xauth virt-install virt-viewer virt-manager libguestfs-tools-c libguestfs-tools tmux httpd-tools git x3270-x11 nc net-tools
 systemctl start libvirtd.service
 systemctl enable libvirtd
 ----
