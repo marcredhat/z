@@ -140,12 +140,6 @@ Login Succeeded!
 == Install OpenShift 4
 
 ----
-(molecule_ansible) [marc@dell-r730-001 marc-role]$ deactivate
-[marc@dell-r730-001 marc-role]$ su -
-Password:
-----
-
-----
 As root,
 [root@dell-r730-001 ~]# echo -e "[main]\ndns=dnsmasq" > /etc/NetworkManager/conf.d/nm-dns.conf
 [root@dell-r730-001 ~]# systemctl restart NetworkManager
