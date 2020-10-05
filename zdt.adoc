@@ -160,7 +160,7 @@ Restart sshd for changes to get get effect :
 
 
 ----
-copy cloud.redhat.com/openshift/install/pull-secret to /root/pull-secret
+copy the pull secret from https://cloud.redhat.com/openshift/install/pull-secret to /root/pull-secret
 ----
 
 ----
