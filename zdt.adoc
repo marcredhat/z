@@ -203,7 +203,8 @@ NOTE: Change CPUs, disk and memory values for masters and workers according to y
 ----
 vim ./ocp4_setup_upi_kvm.sh:
 
-Edit the default values for memory and CPUs (BTS_MEM and BTS_CPU)
+Under "# Default Values", set the numbers of workers, masters, CPU and memory requirements etc
+according to your requirements.
 
 Edit disk, currently hardcoded at 50GB (search for "size=")
 Example to change disk from 50GB to 1000GB for all masters and workers:
